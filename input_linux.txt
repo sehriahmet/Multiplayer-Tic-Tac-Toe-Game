@@ -1,0 +1,7 @@
+5 5 3 3
+X 4 
+./players_linux/random_player X 100 5 5
+O 4 
+./players_linux/horizontal_player O 200 5 5
+Z 4 
+./players_linux/smart_player Z 150 5 5

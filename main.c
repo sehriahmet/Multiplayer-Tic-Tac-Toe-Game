@@ -26,7 +26,8 @@ void read_file() {
     FILE *file;
 
     file = fopen("input.txt", "r");
-    
+    // file = fopen("input_linux.txt", "r");
+
     fscanf(file, "%d %d %d %d", &grid_width, &grid_height, &streak_size, &player_count);
 
     players = (Player *)malloc(player_count * sizeof(Player));
