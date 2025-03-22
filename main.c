@@ -92,27 +92,92 @@ void clean_up() {
 }
 
 int check_win(int x, int y, char character, char grid[grid_width][grid_height]) {
-    int count = 1;
-    for (int i = x + 1; i < grid_width && grid[i][y] == character; i++) count++;
-    for (int i = x - 1; i >= 0 && grid[i][y] == character; i--) count++;
-    if (count >= streak_size) return 1;
+    // check vertical first
+    int i=0; 
+    int j=0;
+    int count = 0;
+    while (grid[x-i][y] == character && x-i>-1) {
+        count++;
+        printf("check_win for vertical -> x: %d y: %d\n char: %c\ncount:%d\n", y, x-i, grid[x-i][y], count);
+        i++;
+    }
+    j=1;
+    while (grid[x+j][y] == character && x+j< grid_width) {
+        count++;
+        printf("check_win for vertical -> x: %d y: %d\n char: %c\ncount:%d\n", y, x+j, grid[x+j][y], count);
+        j++;
+    }
+    if (count>=streak_size) {
+        printf("Found in y vertical \n"); 
+        return 1;
+    }
 
-    count = 1;
-    for (int j = y + 1; j < grid_height && grid[x][j] == character; j++) count++;
-    for (int j = y - 1; j >= 0 && grid[x][j] == character; j--) count++;
-    if (count >= streak_size) return 1;
+    // check horizontal 
+    i=0;
+    count=0;
+    while (grid[x][y-i] == character && y-i>-1) {
+        count++;
+        printf("check_win for horizontal-> x: %d y: %d\nchar: %c \ncount:%d\n", y-i, x, grid[x][y-i], count);
+        i++;
+    }
+    j=1;
+    while (grid[x][y+j] == character && y+j<grid_height) {
+        count++;
+        printf("check_win for horizontal-> x: %d y: %d\n char: %c\ncount:%d\n", y+j, x, grid[x][y+j], count);
+        j++;
+    }
+    if (count>=streak_size) {
+        printf("found in x horizontal\n"); 
+        return 1;
+    }
 
-    count = 1;
-    for (int i = x + 1, j = y + 1; i < grid_width && j < grid_height && grid[i][j] == character; i++, j++) count++;
-    for (int i = x - 1, j = y - 1; i >= 0 && j >= 0 && grid[i][j] == character; i--, j--) count++;
-    if (count >= streak_size) return 1;
+    // check diagonal for left 
+    i=0;
+    j=0;
+    count=0;
+    while (grid[x+i][y+j] == character && x+i<grid_width && y+j < grid_height) {
+        count++;
+        printf("check_win for diagonal left -> x: %d y: %d\n char: %c\ncount:%d\n", y+j, x+i, grid[x+i][y+j], count);
+        i++;
+        j++;
+    }
+    i=1;
+    j=1;
+    while (grid[x-i][y-j] == character && x-i>-1 && y-j > -1) {
+        count++;
+        printf("check_win for diagonal left -> x: %d y: %d\n char: %c\ncount:%d\n", y-j, x-i, grid[x-i][y-j], count);
+        i++;
+        j++;
+    }
+    if (count>=streak_size) {
+        return 1;
+    }
 
-    count = 1;
-    for (int i = x + 1, j = y - 1; i < grid_width && j >= 0 && grid[i][j] == character; i++, j--) count++;
-    for (int i = x - 1, j = y + 1; i >= 0 && j < grid_height && grid[i][j] == character; i--, j++) count++;
-    if (count >= streak_size) return 1;
+    // check diagonal for right 
+    i=0;
+    j=0;
+    count=0;
+    while (grid[x+i][y-j] == character && x+i<grid_width && y-j > -1) {
+        count++;
+        printf("check_win in diagonal right -> x: %d y: %d\n char: %c\ncount:%d\n", y-j, x+i, grid[x+i][y-j], count);
+        i++;
+        j++;
+    }
+    i=1;
+    j=1;
+    while (grid[x-i][y+j] == character && x-i>-1 && y+j<grid_height) {
+        count++;
+        printf("check_win in diagonal right -> x: %d y: %d\n char: %c\ncount:%d\n", y+j, x-i, grid[x-i][y+j], count);
+        i++;
+        j++;
+    }
+    if (count>=streak_size) {
+        return 1;
+    }
 
     return 0;
+
+
 }
 
 void take_player_input(int a, char grid[grid_width][grid_height], gu grid_updates[grid_height * grid_width],int *update_count) {
@@ -125,28 +190,37 @@ void take_player_input(int a, char grid[grid_width][grid_height], gu grid_update
     client_msg_print.client_message = &client_msg;
     server_msg_print.process_id = getpid();
     server_msg_print.server_message = &server_msg;
+    gd grid_datas[grid_height * grid_width];
 
-    if (read(player[a].player_pipe[0], &client_msg, sizeof(cm) )) { 
+    // printf("Reading from player %d\n", a);
+    if (read(player[a].player_pipe[0], &client_msg, sizeof(cm))) { 
         print_output(&client_msg_print,NULL,NULL,0);
         if (client_msg.type == START) {
             server_msg.type = RESULT;
             server_msg.success = 0;
             server_msg.filled_count = filled_count;
-            write(player[a].player_pipe[0], &server_msg, sizeof(server_msg));
+            // print_output(NULL, &server_msg_print, grid_updates, *update_count);
+            // write(player[a].player_pipe[0], &server_msg, sizeof(server_msg));
         } else if (client_msg.type == MARK) {
             printf("in client msg is MARK condition bp\n");
             int x = client_msg.position.x;
             int y = client_msg.position.y;
             server_msg.type = RESULT;
-            printf("after mark message if it is okey player: %c, grid: \n", player[a].player_char, grid[x][y]);
+            // printf("after mark message if it is okey player: %c, grid: \n", player[a].player_char, grid[x][y]);
             
             if (grid[x][y] == '.') {
-                printf("in grid is empty part bp update count: %d\n\n", (*update_count)+1);
+                // write(player[a].player_pipe[0], &server_msg, sizeof(sm)); 
+                // printf("in grid is empty part bp update count: %d\n\n", (*update_count)+1);
                 server_msg.success = 1;
                 grid[x][y] = player[a].player_char;
                 grid_updates[*update_count].position.x = x;
                 grid_updates[*update_count].position.y = y;
                 grid_updates[*update_count].character = player[a].player_char;
+
+                grid_datas[*update_count].position.x = x;
+                grid_datas[*update_count].position.y = y;
+                grid_datas[*update_count].character = player[a].player_char;
+                
                 (*update_count)++;
                 filled_count++;
 
@@ -154,8 +228,10 @@ void take_player_input(int a, char grid[grid_width][grid_height], gu grid_update
                     sm end_msg;
                     end_msg.type = END;
                     for (int i = 0; i < player_count; i++) {
+                        print_output(NULL,&(smp){getpid(), &end_msg} , NULL, 0);
                         write(player[i].player_pipe[0], &end_msg, sizeof(end_msg));
                     }
+                    print_grid(grid);
                     printf("Winner: Player%c\n", player[a].player_char);
                     exit(0); 
                 }
@@ -164,23 +240,28 @@ void take_player_input(int a, char grid[grid_width][grid_height], gu grid_update
                     sm end_msg;
                     end_msg.type = END;
                     for (int i = 0; i < player_count; i++) {
+                        print_output(NULL,&(smp){getpid(), &end_msg} , NULL, 0);
                         write(player[i].player_pipe[0], &end_msg, sizeof(end_msg));
                     }
+                    print_grid(grid);
                     printf("Draw\n");
                     exit(0); 
                 }
-
+                
             } else {
+                printf("grid is not valid MARK condition. player %c\n", player[a].player_char);
+                server_msg.type = RESULT;
                 server_msg.success = 0; 
+                // write(player[a].player_pipe[0], &server_msg, sizeof(sm)); 
             }
             
             server_msg.filled_count = filled_count;
             
         }
-        
-        
+
         write(player[a].player_pipe[0], &server_msg, sizeof(sm)); 
-        
+        write(player[a].player_pipe[0], &grid_datas, filled_count * sizeof(gd)); 
+    
         print_output(NULL, &server_msg_print, grid_updates, *update_count);
         print_grid(grid);
         // print_output(&client_msg_print,NULL,NULL,0);
@@ -255,19 +336,22 @@ int main() {
 
     gu grid_updates[grid_width][grid_height]; 
     int update_count = 0; 
-
+    int l=0;
     // loop until game ends 
     while (1) {
-        int ready = poll(fds, player_count, 1);
+        int ready = poll(fds, player_count, 1000);
         if (ready < 0) {
             perror("poll");
             exit(1);
         }
-
+        if (ready == 0) {
+            printf("Poll timed out, no data received.\n");
+        }
         for (int i = 0; i < player_count; i++) {
             if (fds[i].revents & POLLIN) {
-                printf("pipe data received for player %d. server pid: %d \n",i, getpid());
-                take_player_input(i, grid, grid_updates, &update_count);
+                // printf("count: %d, pipe data received for player %d. server pid: %d \n", l, i, getpid());
+                l++;
+                take_player_input(i, grid, *grid_updates, &update_count);
             } 
         }
         // printf("in main loop");
