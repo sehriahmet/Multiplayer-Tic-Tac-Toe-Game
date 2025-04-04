@@ -1,7 +1,7 @@
 // Ahmet Sehriyaroglu 
 // 2581015 
 
-#include <unistd.h> // these 2 may not useful just look for further applications 
+#include <unistd.h> 
 #include <stdio.h>
 #include <stdlib.h>
 #include<sys/ipc.h>
@@ -80,44 +80,44 @@ void clean_up() {
 }
 
 int check_win(int x, int y, char character, char grid[grid_width][grid_height]) {
-    // check vertical first
+    // check horizontal first
     int i=0; 
     int j=0;
     int count = 0;
     while (grid[x-i][y] == character && x-i>-1) {
         count++;
-        // printf("check_win for vertical -> x: %d y: %d\n char: %c\ncount:%d\n", y, x-i, grid[x-i][y], count);
+        // printf("check_win for horizontal -> x: %d y: %d\n char: %c\ncount:%d\n", y, x-i, grid[x-i][y], count);
         i++;
     }
     j=1;
     while (grid[x+j][y] == character && x+j< grid_width) {
         count++;
-        // printf("check_win for vertical -> x: %d y: %d\n char: %c\ncount:%d\n", y, x+j, grid[x+j][y], count);
+        // printf("check_win for horizontal -> x: %d y: %d\n char: %c\ncount:%d\n", y, x+j, grid[x+j][y], count);
         j++;
     }
     if (count>=streak_size) {
         // this should be deleted! 
-        // printf("Found in y vertical -> x: %d  y: %d \n char : %c count : %d\n", y, x, grid[x][y], count); 
+        // printf("Found in x horizontal -> x: %d  y: %d \n char : %c count : %d\n", x, y, grid[x][y], count); 
         return 1;
     }
 
-    // check horizontal 
+    // check vertical 
     i=0;
     count=0;
     while (grid[x][y-i] == character && y-i>-1) {
         count++;
-        // printf("check_win for horizontal-> x: %d y: %d\nchar: %c \ncount:%d\n", y-i, x, grid[x][y-i], count);
+        // printf("check_win for vertical-> x: %d y: %d\nchar: %c \ncount:%d\n", x, y-i, grid[x][y-i], count);
         i++;
     }
     j=1;
     while (grid[x][y+j] == character && y+j<grid_height) {
         count++;
-        // printf("check_win for horizontal-> x: %d y: %d\n char: %c\ncount:%d\n", y+j, x, grid[x][y+j], count);
+        // printf("check_win for vertical-> x: %d y: %d\n char: %c\ncount:%d\n", x, y+j, grid[x][y+j], count);
         j++;
     }
     if (count>=streak_size) {
         // this should be deleted! 
-        // printf("found in x horizontal -> x: %d  y: %d \n char : %c count : %d\n", y, x, grid[x][y], count); 
+        // printf("found in y vertical -> x: %d  y: %d \n char : %c count : %d\n", x, y, grid[x][y], count); 
         return 1;
     }
 
@@ -141,7 +141,7 @@ int check_win(int x, int y, char character, char grid[grid_width][grid_height]) 
     }
     if (count>=streak_size) {
         // this should be deleted! 
-        // printf("Found in diagonal left -> x: %d  y: %d \n char : %c count : %d\n", y, x, grid[x][y], count); 
+        // printf("Found in diagonal left -> x: %d  y: %d \n char : %c count : %d\n", x, y, grid[x][y], count); 
         return 1;
     }
 
@@ -165,7 +165,7 @@ int check_win(int x, int y, char character, char grid[grid_width][grid_height]) 
     }
     if (count>=streak_size) {
         // this should be deleted! 
-        // printf("Found in diagonal right -> x: %d  y: %d \n char : %c count : %d\n", y, x, grid[x][y], count); 
+        // printf("Found in diagonal right -> x: %d  y: %d \n char : %c count : %d\n", x, y, grid[x][y], count); 
         return 1;
     }
 
@@ -178,9 +178,11 @@ void take_player_input(int a, char grid[grid_width][grid_height], gu grid_update
     sm server_msg;
     smp server_msg_print; 
     cm client_msg;
+    
     cmp client_msg_print; 
     client_msg_print.process_id = player[a].player_pid;
     client_msg_print.client_message = &client_msg;
+
     server_msg_print.process_id = player[a].player_pid;
     server_msg_print.server_message = &server_msg;
     gd grid_datas[grid_height * grid_width];
@@ -191,6 +193,11 @@ void take_player_input(int a, char grid[grid_width][grid_height], gu grid_update
             server_msg.type = RESULT;
             server_msg.success = 0;
             server_msg.filled_count = filled_count;
+
+            write(player[a].player_pipe[0], &server_msg, sizeof(sm)); 
+            write(player[a].player_pipe[0], &grid_datas, filled_count * sizeof(gd)); 
+            print_output(NULL, &server_msg_print, grid_updates, *update_count);
+        
         } else if (client_msg.type == MARK) {
             int x = client_msg.position.x;
             int y = client_msg.position.y;
@@ -209,6 +216,13 @@ void take_player_input(int a, char grid[grid_width][grid_height], gu grid_update
                 (*update_count)++;
                 filled_count++;
 
+                server_msg.filled_count = filled_count;
+                
+                write(player[a].player_pipe[0], &server_msg, sizeof(sm)); 
+                write(player[a].player_pipe[0], &grid_datas, filled_count * sizeof(gd)); 
+                print_output(NULL, &server_msg_print, grid_updates, *update_count);
+                // print_grid(grid);
+                
                 if (check_win(x, y, player[a].player_char, grid)) {
                     sm end_msg;
                     end_msg.type = END;
@@ -216,9 +230,6 @@ void take_player_input(int a, char grid[grid_width][grid_height], gu grid_update
                         print_output(NULL,&(smp){player[i].player_pid, &end_msg} , NULL, 0);
                         write(player[i].player_pipe[0], &end_msg, sizeof(end_msg));
                     }
-                    // this print_grid should be deleted!.
-                    print_grid(grid);
-
                     printf("Winner: Player%c\n", player[a].player_char);
                     exit(0);
                 }
@@ -230,26 +241,20 @@ void take_player_input(int a, char grid[grid_width][grid_height], gu grid_update
                         print_output(NULL,&(smp){player[i].player_pid, &end_msg} , NULL, 0);
                         write(player[i].player_pipe[0], &end_msg, sizeof(end_msg));
                     }
-                    // this print_grid should be deleted!.
-                    print_grid(grid);
-
                     printf("Draw\n");
                     exit(0);
                 }
             } else {
                 server_msg.type = RESULT;
                 server_msg.success = 0; 
+                server_msg.filled_count = filled_count;
+
+                write(player[a].player_pipe[0], &server_msg, sizeof(sm)); 
+                write(player[a].player_pipe[0], &grid_datas, filled_count * sizeof(gd)); 
+                print_output(NULL, &server_msg_print, grid_updates, *update_count);
+
             }
-            server_msg.filled_count = filled_count;
         }
-
-        write(player[a].player_pipe[0], &server_msg, sizeof(sm)); 
-        write(player[a].player_pipe[0], &grid_datas, filled_count * sizeof(gd)); 
-    
-        print_output(NULL, &server_msg_print, grid_updates, *update_count);
-
-        // this print_grid should be deleted!.
-        print_grid(grid);
 
     }
 }
@@ -300,8 +305,8 @@ int main() {
             
         } else {
             close(player[i].player_pipe[1]); 
-            dup2(player[i].player_pipe[0], 2); // in here pipe can be taken to the stdout maybe
-            dup2(player[i].player_pipe[0], 0); 
+            // dup2(player[i].player_pipe[0], 2); // in here pipe can be taken to the stdout maybe
+            // dup2(player[i].player_pipe[0], 0); 
             // close(player[i].player_pipe[0]); // cannot take to the stage poll() when it's closed 
         }
     }
@@ -323,9 +328,11 @@ int main() {
             perror("poll");
             exit(1);
         }
-        if (ready == 0) {
-            printf("Poll timed out, no data received.\n");
-        }
+
+        // if (ready == 0) {
+        //     printf("Poll timed out, no data received.\n");
+        // }
+
         for (int i = 0; i < player_count; i++) {
             if (fds[i].revents & POLLIN) {
                 // printf("pipe data received for player %d. server pid: %d \n", i, getpid());
