@@ -323,7 +323,7 @@ int main() {
 
     // loop until game ends 
     while (1) {
-        int ready = poll(fds, player_count, 1000);
+        int ready = poll(fds, player_count, 1);
         if (ready < 0) {
             perror("poll");
             exit(1);
