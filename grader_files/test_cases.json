@@ -1,0 +1,1382 @@
+[
+  {
+    "name": "basic_3x3_1",
+    "grid_width": 3,
+    "grid_height": 3,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "3",
+          "3"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "3",
+          "3"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "basic_3x3_2",
+    "grid_width": 3,
+    "grid_height": 3,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "3",
+          "3"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "3",
+          "3"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "basic_3x3_3",
+    "grid_width": 3,
+    "grid_height": 3,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "3",
+          "3"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "3",
+          "3"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "basic_3x3_4",
+    "grid_width": 3,
+    "grid_height": 3,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "3",
+          "3"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "3",
+          "3"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "basic_3x3_5",
+    "grid_width": 3,
+    "grid_height": 3,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "3",
+          "3"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "3",
+          "3"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "basic_3x3_6",
+    "grid_width": 3,
+    "grid_height": 3,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "3",
+          "3"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "3",
+          "3"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "basic_3x3_7",
+    "grid_width": 3,
+    "grid_height": 3,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "3",
+          "3"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "3",
+          "3"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "basic_3x3_8",
+    "grid_width": 3,
+    "grid_height": 3,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "3",
+          "3"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "3",
+          "3"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "basic_3x3_9",
+    "grid_width": 3,
+    "grid_height": 3,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "3",
+          "3"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "3",
+          "3"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "basic_3x3_10",
+    "grid_width": 3,
+    "grid_height": 3,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "3",
+          "3"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "3",
+          "3"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "large_grid_1",
+    "grid_width": 5,
+    "grid_height": 5,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "5",
+          "5"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "5",
+          "5"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "large_grid_2",
+    "grid_width": 7,
+    "grid_height": 7,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "7",
+          "7"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "7",
+          "7"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "large_grid_3",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "large_grid_4",
+    "grid_width": 15,
+    "grid_height": 15,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "15",
+          "15"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "15",
+          "15"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "large_grid_5",
+    "grid_width": 20,
+    "grid_height": 20,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "20",
+          "20"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "20",
+          "20"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "streak_size_1",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "streak_size_2",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 4,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "streak_size_3",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "streak_size_4",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 6,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "streak_size_5",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 7,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "multi_player_1",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "A",
+        "args": [
+          "./vertical_player",
+          "A",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "B",
+        "args": [
+          "./horizontal_player",
+          "B",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "C",
+        "args": [
+          "./horizontal_player",
+          "C",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "multi_player_2",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "A",
+        "args": [
+          "./horizontal_player",
+          "A",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "B",
+        "args": [
+          "./horizontal_player",
+          "B",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "C",
+        "args": [
+          "./vertical_player",
+          "C",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "D",
+        "args": [
+          "./diagonal_player",
+          "D",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "E",
+        "args": [
+          "./smart_player",
+          "E",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "multi_player_3",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "A",
+        "args": [
+          "./random_player",
+          "A",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "B",
+        "args": [
+          "./vertical_player",
+          "B",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "C",
+        "args": [
+          "./diagonal_player",
+          "C",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "multi_player_4",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "A",
+        "args": [
+          "./diagonal_player",
+          "A",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "B",
+        "args": [
+          "./horizontal_player",
+          "B",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "C",
+        "args": [
+          "./smart_player",
+          "C",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "D",
+        "args": [
+          "./diagonal_player",
+          "D",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "E",
+        "args": [
+          "./diagonal_player",
+          "E",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "multi_player_5",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "A",
+        "args": [
+          "./diagonal_player",
+          "A",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "B",
+        "args": [
+          "./smart_player",
+          "B",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "C",
+        "args": [
+          "./smart_player",
+          "C",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "multi_player_6",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "A",
+        "args": [
+          "./horizontal_player",
+          "A",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "B",
+        "args": [
+          "./vertical_player",
+          "B",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "C",
+        "args": [
+          "./diagonal_player",
+          "C",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "D",
+        "args": [
+          "./random_player",
+          "D",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "multi_player_7",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "A",
+        "args": [
+          "./random_player",
+          "A",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "B",
+        "args": [
+          "./vertical_player",
+          "B",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "C",
+        "args": [
+          "./diagonal_player",
+          "C",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "D",
+        "args": [
+          "./smart_player",
+          "D",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "multi_player_8",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "A",
+        "args": [
+          "./vertical_player",
+          "A",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "B",
+        "args": [
+          "./diagonal_player",
+          "B",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "C",
+        "args": [
+          "./horizontal_player",
+          "C",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "D",
+        "args": [
+          "./random_player",
+          "D",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "E",
+        "args": [
+          "./random_player",
+          "E",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "multi_player_9",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "A",
+        "args": [
+          "./horizontal_player",
+          "A",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "B",
+        "args": [
+          "./random_player",
+          "B",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "C",
+        "args": [
+          "./smart_player",
+          "C",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "D",
+        "args": [
+          "./diagonal_player",
+          "D",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "multi_player_10",
+    "grid_width": 10,
+    "grid_height": 10,
+    "streak_size": 5,
+    "players": [
+      {
+        "char": "A",
+        "args": [
+          "./horizontal_player",
+          "A",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "B",
+        "args": [
+          "./horizontal_player",
+          "B",
+          "100",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "char": "C",
+        "args": [
+          "./diagonal_player",
+          "C",
+          "100",
+          "10",
+          "10"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "edge_small_grid_large_streak",
+    "grid_width": 3,
+    "grid_height": 3,
+    "streak_size": 4,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "3",
+          "3"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "3",
+          "3"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "edge_rectangular_grid",
+    "grid_width": 5,
+    "grid_height": 3,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "100",
+          "5",
+          "3"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "100",
+          "5",
+          "3"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "edge_fast_players",
+    "grid_width": 5,
+    "grid_height": 5,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "10",
+          "5",
+          "5"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "10",
+          "5",
+          "5"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "edge_slow_players",
+    "grid_width": 5,
+    "grid_height": 5,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "1000",
+          "5",
+          "5"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "1000",
+          "5",
+          "5"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "edge_all_player_types",
+    "grid_width": 7,
+    "grid_height": 7,
+    "streak_size": 4,
+    "players": [
+      {
+        "char": "A",
+        "args": [
+          "./smart_player",
+          "A",
+          "100",
+          "7",
+          "7"
+        ]
+      },
+      {
+        "char": "B",
+        "args": [
+          "./random_player",
+          "B",
+          "100",
+          "7",
+          "7"
+        ]
+      },
+      {
+        "char": "C",
+        "args": [
+          "./horizontal_player",
+          "C",
+          "100",
+          "7",
+          "7"
+        ]
+      },
+      {
+        "char": "D",
+        "args": [
+          "./vertical_player",
+          "D",
+          "100",
+          "7",
+          "7"
+        ]
+      },
+      {
+        "char": "E",
+        "args": [
+          "./diagonal_player",
+          "E",
+          "100",
+          "7",
+          "7"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "edge_mixed_1",
+    "grid_width": 9,
+    "grid_height": 4,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "493",
+          "9",
+          "4"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "228",
+          "9",
+          "4"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "edge_mixed_2",
+    "grid_width": 5,
+    "grid_height": 3,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "222",
+          "5",
+          "3"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "381",
+          "5",
+          "3"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "edge_mixed_3",
+    "grid_width": 6,
+    "grid_height": 6,
+    "streak_size": 4,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "149",
+          "6",
+          "6"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "356",
+          "6",
+          "6"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "edge_mixed_4",
+    "grid_width": 3,
+    "grid_height": 6,
+    "streak_size": 3,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "94",
+          "3",
+          "6"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "402",
+          "3",
+          "6"
+        ]
+      }
+    ],
+    "timeout": 10
+  },
+  {
+    "name": "edge_mixed_5",
+    "grid_width": 10,
+    "grid_height": 5,
+    "streak_size": 4,
+    "players": [
+      {
+        "char": "X",
+        "args": [
+          "./smart_player",
+          "X",
+          "371",
+          "10",
+          "5"
+        ]
+      },
+      {
+        "char": "O",
+        "args": [
+          "./random_player",
+          "O",
+          "170",
+          "10",
+          "5"
+        ]
+      }
+    ],
+    "timeout": 10
+  }
+]
