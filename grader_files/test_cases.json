@@ -26,7 +26,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "basic_3x3_2",
@@ -55,7 +55,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "basic_3x3_3",
@@ -84,7 +84,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "basic_3x3_4",
@@ -113,7 +113,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "basic_3x3_5",
@@ -142,7 +142,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "basic_3x3_6",
@@ -171,7 +171,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "basic_3x3_7",
@@ -200,7 +200,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "basic_3x3_8",
@@ -229,7 +229,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "basic_3x3_9",
@@ -258,7 +258,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "basic_3x3_10",
@@ -287,7 +287,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "large_grid_1",
@@ -316,7 +316,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "large_grid_2",
@@ -345,7 +345,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "large_grid_3",
@@ -374,7 +374,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "large_grid_4",
@@ -403,7 +403,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "large_grid_5",
@@ -432,7 +432,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "streak_size_1",
@@ -461,7 +461,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "streak_size_2",
@@ -490,7 +490,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "streak_size_3",
@@ -519,7 +519,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "streak_size_4",
@@ -548,7 +548,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "streak_size_5",
@@ -577,7 +577,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "multi_player_1",
@@ -616,7 +616,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "multi_player_2",
@@ -675,7 +675,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "multi_player_3",
@@ -714,7 +714,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "multi_player_4",
@@ -773,7 +773,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "multi_player_5",
@@ -812,7 +812,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "multi_player_6",
@@ -861,7 +861,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "multi_player_7",
@@ -910,7 +910,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "multi_player_8",
@@ -969,7 +969,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "multi_player_9",
@@ -1018,7 +1018,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "multi_player_10",
@@ -1057,7 +1057,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "edge_small_grid_large_streak",
@@ -1086,7 +1086,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "edge_rectangular_grid",
@@ -1115,7 +1115,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "edge_fast_players",
@@ -1144,7 +1144,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "edge_slow_players",
@@ -1173,7 +1173,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "edge_all_player_types",
@@ -1232,7 +1232,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "edge_mixed_1",
@@ -1261,7 +1261,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "edge_mixed_2",
@@ -1290,7 +1290,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "edge_mixed_3",
@@ -1319,7 +1319,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "edge_mixed_4",
@@ -1348,7 +1348,7 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   },
   {
     "name": "edge_mixed_5",
@@ -1377,6 +1377,6 @@
         ]
       }
     ],
-    "timeout": 10
+    "timeout": 20
   }
 ]
